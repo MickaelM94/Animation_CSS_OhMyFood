@@ -1,0 +1,198 @@
+/* 
+  SECTIONS NAVIGATION : CTRL+F "=="
+  RSPONSIVE'S SECTIONS NAVIGATION : CTRL+F "++"
+  BREAK POINTS : 
+ */
+
+/* ------- == SEMANTIC ELEMENTS ------- */
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+
+h2 {
+    font-size: x-large;
+    text-transform:uppercase;
+    font-weight: 400;
+    position: relative;
+    margin-left: 10px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  background-color: lightgreen;
+  height: 4px;
+  width: 60px;
+}
+
+h3 {
+  font-size: x-large;
+  margin: 0px 0px 4px 0px;
+}
+
+ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+li {
+  line-height: 28px;
+}
+
+/* ------- == FONT & COLOR ------- */
+
+.font-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+/* ------- == MARGIN / PADDING / RADIUS ------- */
+
+.margin-reset {
+  margin: 0px;
+}
+
+.margin-top-sxmall { 
+  margin-top: 30px;
+}
+
+.margin-x-xsmall {
+  margin: 0px 15px;
+}
+
+.margin-y-medium {
+  margin: 50px 0px;
+}
+
+.p-card {
+  padding: 15px;
+}
+
+.radius-s {
+  border-radius: 20px;
+}
+
+.radius-top-m {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+/* ------- == BACKGROUND / COLOR / SHADOW ------- */
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-grey-light {
+  background-color: lightgray;
+}
+
+.bg-grey {
+  background-color: gray;
+}
+
+.bg-dark {
+  background-color: #474747;
+}
+
+/* ------- == HEADER ------- */
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: auto;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.return {
+  position: absolute;
+  top: 25px;
+  left: -130px;
+  font-size: x-large;
+  color: black;
+}
+
+/* ------- == MAIN ------- */
+
+main img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ------- == CONTAINER ------- */
+
+.container {
+  position: relative;
+  padding: 50px 20px;
+  margin-top: -55px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.card div {
+display: flex;
+justify-content: space-between;
+}
+
+.like {
+position: absolute;
+top: 55px;
+right: 40px;
+font-size: x-large;
+cursor: pointer;
+font-size: xx-large;
+}
+
+.btn {
+  display: block;
+  background-color: blueviolet;
+  padding: 20px 50px;
+  margin: 60px auto 15px auto;
+  border-radius: 50px;
+  width: fit-content;
+  font-size: x-large;
+}
+
+/* ------- == FOOTER ------- */
+
+footer {
+  padding: 20px;
+}
+
+.text-logo {
+  font-family: "Shrikhand", cursive;
+  font-size: x-large;
+}
+
+.footer-icone {
+  display: inline-block;
+  width: 20px;
+  font-size: 14px;
+}
