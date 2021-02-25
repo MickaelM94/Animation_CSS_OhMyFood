@@ -1,0 +1,112 @@
+/* HEART ANIMATED */
+
+.card-test {
+  @include shadow;
+  @include bg-white;
+  margin: 20% auto;
+  width: 50%;
+  position: relative;
+  border-radius: 20px;
+
+  &__text {
+    line-height: 24px;
+    padding: 15px;
+
+    *:first-child {
+      background: linear-gradient(178deg, #9356dc 0%, #ff79da 100%);
+      color: transparent;
+      font-size: large;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    * {
+      @include reset;
+    }
+  }
+}
+
+.like-test {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  z-index: 2;
+
+  &__icone {
+    background: linear-gradient(178deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* LOADER */
+
+.wrap__container-test {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  background: white;
+  animation: loader-test 3s linear 1 both;
+  -webkit-animation: loader-test 3s linear 1 both;
+}
+
+.container__loader-test {
+  margin: auto;
+  display: inline-flex;
+  column-gap: 20px;
+}
+
+.loaderCircles-test {
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 30px;
+  border: 4px solid transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+    border-radius: 30px;
+    border: 4px solid transparent;
+    border-top: 4px solid $primary;
+    animation: spin 1.5s ease-in-out infinite;
+  }
+}
+
+.loaderText-test {
+  margin: auto;
+
+  p {
+    @include shrikhand;
+    @include reset;
+    font-size: x-large;
+    color: $primary;
+    animation: colored-spacing 1.5s ease-in-out infinite;
+    -webkit-animation: colored-spacing 1.5s ease-in-out infinite;
+  }
+}
+
+.site {
+  display: flex;
+  height: 120vh;
+  background-color: #9356dc;
+  text-align: center;
+  padding: 40px;
+  animation: pages-test 6 ease-in-out;
+  -webkit-animation: pages-test 6 ease-in-out;
+  p{
+    @include reset;
+    margin: auto;
+  }
+}

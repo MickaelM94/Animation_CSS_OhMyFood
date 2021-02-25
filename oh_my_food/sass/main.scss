@@ -1,255 +1,29 @@
-/* 
-  SECTIONS NAVIGATION : CTRL+F "=="
-  RSPONSIVE'S SECTIONS NAVIGATION : CTRL+F "++"
-  BREAK POINTS : 
- */
+/* ------- UTILS ------- */
 
-/* ------- == VARIABLES ------- */
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
 
-$primary: rgba(147,86,220,1);
-$secondary: rgba(255,121,218,1);
-$tertiary: rgba(153,226,208,1);
-$green: rgba(0,135,102,1);
-$grey: rgba(234,234,234,1);
-$light-grey: rgba(246,246,246,1);
-$dark: rgba(53,53,53,1);
+/* ------- BASE ------- */
 
-/* ------- == BASIC SECTIONS ------- */
+@import "./base/reset";
+@import "./base/typography";
 
-* {
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: xx-large;
-    margin: 0px;
-  }
-  
-  h4 {
-    margin: 0px;
-    font-size: 18px;
-  }
-  
-  ul {
-    list-style: none;
-    margin-left: -40px;
-  }
-  
-  li {
-    line-height: 28px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background: linear-gradient(355deg, $primary 0%, $secondary 100%);
-    padding: 15px 30px;
-    margin: 15px 0px;
-    border-radius: 50px;
-  }
-  
-  /* ------- MARGIN / PADDING / RADIUS ------- */
-  
-  .margin-reset {
-    margin: 0px;
-  }
-  
-  .margin-r-10 {
-    margin-right: 10px;
-  }
-  
-  .margin-r-20 {
-    margin-right: 20px;
-  }
-  
-  .margin-container {
-    margin: 20px 0px;
-  }
-  .p-40 {
-    padding: 40px;
-  }
-  
-  .p-xsmall {
-    padding: 15px;
-  }
-  
-  .p-section {
-    padding: 40px 20px;
-  }
-  
-  .radius-s {
-    border-radius: 20px;
-  }
-  
-  .radius-m {
-    border-radius: 25px;
-  }
-  
-  .radius-top-s {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px
-  }
-  
-  /* ------- BACKGROUNDS / COLORS / SHADOWS------- */
-  
-  .bg-white {
-    background-color: white;
-  }
-  
-  .bg-grey-light {
-    background-color: $light-grey;
-  }
-  
-  .bg-grey {
-    background-color: $grey;
-  }
-  
-  .bg-dark {
-    background-color: $dark;
-  }
-  
-  .font-white {
-    color: white;
-  }
+/* ------- COMPONENTS ------ */
 
-  .shadow {
-    box-shadow: 0px 1px 4px 1px rgba(53,53,53,0.2);
-  }
+@import "./components/buttons";
+@import "./components/loader";
 
-  .shadow-medium {
-    box-shadow: 0px 4px 10px 1px rgba(53,53,53,0.2);
-  }
-  
-  /* ------- == HEADER ------- */
-  
-  header {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .logo {
-    z-index: 2;
-    width: 100%;  
-    padding: 20px 0px;
-  }
+/* ------- LAYOUT ------- */
 
-  header p {
-    font-weight: bold;
-  }
-  
-  /* ------- == FUNCTIONNEMENT'S SECTION ------- */
-  
-  .raw-container div:nth-child(2) {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  
-  .raw {
-    display: flex;
-    position: relative;
-    margin-left: 10px;
-    height: 90px;
-  }
-  
-  #functionnement .raw p:first-child {
-    margin: auto 0px auto -12px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
-    font-size: medium;
-    background-color: $primary;
-    padding: 5px;
-    text-align: center;
-    color: white;
-  }
-  
-  #functionnement .raw p:nth-child(2) {
-    width: 20px;
-    text-align: center;
-    font-size: x-large;
-    margin: auto 30px;
-  }
-  
-  #functionnement .raw p:nth-child(3) {
-    font-weight: bold;
-    font-size: large;
-    margin: auto 0px;
-  }
-  
-  /* ------- == RESTAURANT'S SECTION ------- */
-  
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    row-gap :20px;
-  }
-  
-  .card-container a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .card {
-    width: 100%;
-    position: relative;
-  }
-  
-  .card img {
-    height: 220px;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .card-text {
-    line-height: 24px;
-  }
-  
-  .card-text > * {
-    margin: 0px;
-  }
-  
-  .new {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border-radius: 4px;
-    background-color: $tertiary;
-  }
-  
-  .new p {
-    margin: 0px;
-    color: $green;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: large;
-  }
-  
-  .like {
-    position: absolute;
-    bottom: 30px;
-    right: 25px;
-    font-size: x-large;
-    cursor:pointer;
-  }
-  
-  /* ------- == FOOTER ------- */
-  
-  footer {
-    padding: 20px;
-  }
-  
-  .text-logo {
-    font-family: 'Shrikhand', cursive;
-    font-size: x-large;
-  }
-  
-  .footer-icone {
-    display: inline-block;
-    width: 20px;
-    font-size: 14px;
-  }
+@import "./layout/header";
+@import "./layout/footer";
+
+/* ------- PAGES ------- */
+
+@import "./pages/home";
+@import "./pages/restaurants";
+@import "./pages/test";
+
+
+

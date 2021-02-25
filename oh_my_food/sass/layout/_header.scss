@@ -1,0 +1,9 @@
+.siteHeader {
+    @include shadow;
+    position: relative;
+    &__logo {
+        margin: 0px auto;
+        padding: 20px 0px;
+        display: block;
+    }
+}
