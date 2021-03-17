@@ -1,7 +1,15 @@
 .pageWrapper__home {
-  animation: pages 2s ease-in-out 3.5s both;
-  -webkit-animation: pages 2s ease-in-out 2s both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  min-width: 350px;
+  animation: pages 6s ease-in-out 1 both;
+  animation: overflow-hide 4s ease-in-out 1 both;
 }
+
 
 .location {
   @include bg-grey;
@@ -23,19 +31,19 @@
   padding: 40px;
   &__title {
     @include reset;
-    font-size: xx-large;
+    font-size: x-large;
   }
   &__text {
     font-weight: 300;
-    font-size: x-large;
+    font-size: large;
   }
 }
 
 .describ {
-  padding: 70px 20px;
+  padding: 50px 20px;
   &__title {
     @include reset;
-    font-size: xx-large;
+    font-size: x-large;
   }
   &__list {
     display: flex;
@@ -89,7 +97,7 @@
   padding: 40px 20px;
   &__title {
     @include reset;
-    font-size: xx-large;
+    font-size: x-large;
   }
   &__list {
     display: flex;
@@ -149,15 +157,80 @@
   font-size: x-large;
   cursor: pointer;
   z-index: 2;
-  &:hover + .like--effect {
-    display: inline;
+  &:hover + .like--animated {
+    animation: heart-animated .5s linear 1 both;
   }
 }
 
-.like--effect {
+.like--animated {
   position: absolute;
   bottom: 30px;
   right: 25px;
   font-size: x-large;
-  display: none;
+  opacity: 0;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 650px) {
+  .describ {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 40px 20px 0px 20px;
+      column-gap: 20px;
+    }
+    p:first-child {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+    }
+    .describ__cardIcone {
+      display: none;
+    }
+    p:nth-child(3) {
+      text-align: center;
+      margin: auto;
+      padding: 20px;
+    }
+  }
+
+  .restaurants {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+    }
+    &__card img {
+      height: 170px;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  body {
+    background-image: url(/images/ohmyfood.png);
+    background-size: contain;
+  }
+
+  .pageWrapper__home {
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .describ {
+    background-color: white;
+  }
+
+  .restaurants {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+    }
+
+    &__card img {
+      height: 140px;
+    }
+  }
 }
